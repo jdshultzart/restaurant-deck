@@ -492,14 +492,24 @@ p.copy{
 .lb-close:hover{color:var(--amp)}
 
 /* ---------- HOSPITALITY DECK ADDITIONS ---------- */
-/* two-photo pair inside one column */
+/* photos always show in full: no crop on desktop or mobile */
+.imgph.filled{min-height:0!important;height:auto!important;aspect-ratio:auto!important;background:transparent!important;border:0!important;display:block!important;max-width:100%!important;overflow:hidden}
+/* stop large source images from blowing out their grid column */
+.split > *,.pair > *,.trio > *,.cover-grid > *{min-width:0}
+.split,.pair,.trio,.cover-grid{max-width:100%}
+.imgph.filled img{position:static!important;inset:auto!important;display:block;width:100%!important;max-width:100%!important;height:auto!important;object-fit:contain!important;border-radius:2px}
+.cover-photo .imgph{max-width:640px;aspect-ratio:auto!important}
+
+.split{align-items:center}
+.pair,.trio{align-self:center}
+
+
+/* two photos stacked in one column */
 .pair{display:grid;grid-template-columns:1fr;gap:14px}
-.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+/* three photos across the bottom */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px;align-items:start}
 @media(max-width:860px){.trio{grid-template-columns:1fr;gap:14px;margin-top:18px}}
 
-/* cover photo: wider frame */
-.cover-grid{grid-template-columns:1.25fr 1fr}
-.cover-photo .imgph{max-width:640px;aspect-ratio:4/3}
 /* desktop only: flip a split so the photo sits on the left, text stays first in the DOM for mobile */
 @media(min-width:861px){
   .split.img-left > *:first-child{order:2}
@@ -508,10 +518,6 @@ p.copy{
 .step strong{color:var(--white);font-weight:500}
 .steps{grid-template-columns:1fr 1fr}
 @media(max-width:860px){
-  /* every photo shows in full on mobile: natural height, no side crop */
-  .imgph.filled{min-height:0!important;height:auto!important;aspect-ratio:auto!important}
-  .imgph.filled img{position:static!important;inset:auto!important;width:100%!important;height:auto!important;object-fit:contain!important}
-  .cover-photo .imgph{aspect-ratio:auto!important;max-height:none!important}
   .slide .copy{max-width:100%!important}
   .feat-grid.three{grid-template-columns:1fr!important}
   .benefit-list{grid-template-columns:1fr!important}
@@ -569,7 +575,7 @@ p.copy{
       <div class="eyebrow">The Artist</div>
       <h2 class="heading">Forty Years Of<br>Original Work</h2>
       <div class="rule"></div>
-      <p class="copy" style="margin-top:16px">Forty years of original work, known for music, culture, color and energy. The work lives in galleries, private collections and retail environments across the country.</p>
+      <p class="copy" style="margin-top:16px">Forty years of original work, known for music, culture, color and energy. The work lives in galleries, private collections and retail environments across the world.</p>
       <p class="copy" style="margin-top:14px">Nothing is licensed, printed from a catalog or repeated. Every piece starts as an original.</p>
     </div>
     <div class="pair">
