@@ -492,6 +492,15 @@ p.copy{
 .lb-close:hover{color:var(--amp)}
 
 /* ---------- HOSPITALITY DECK ADDITIONS ---------- */
+/* placeholder frame shown until the photo is uploaded to images/ */
+.imgph.filled.empty{
+  border:1px dashed rgba(255,255,255,.22)!important;
+  background:rgba(255,255,255,.03)!important;
+  min-height:230px!important;position:relative!important;
+  display:flex!important;align-items:center;justify-content:center;
+}
+.pair .imgph.filled.empty,.trio .imgph.filled.empty{min-height:170px!important}
+.imgph.filled.empty .ph-fallback{display:flex!important;position:absolute;inset:0;color:var(--grey)}
 /* photos always show in full: no crop on desktop or mobile */
 .imgph.filled{min-height:0!important;height:auto!important;aspect-ratio:auto!important;background:transparent!important;border:0!important;display:block!important;max-width:100%!important;overflow:hidden}
 /* stop large source images from blowing out their grid column */
@@ -547,7 +556,7 @@ p.copy{
       </div>
     </div>
     <div class="cover-photo">
-      <div class="imgph filled"><img src="images/image-1.jpg" alt="JD Shultz installation" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:3px"><span class="ph-fallback">image-1.jpg</span></div>
+      <div class="imgph filled"><img src="images/image-1.jpg" alt="JD Shultz installation" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:3px"><span class="ph-fallback">image-1.jpg</span></div>
     </div>
   </div>
 </section>
@@ -563,7 +572,7 @@ p.copy{
       <p class="copy lede" style="margin-top:16px">Every property in your market has good finishes and good lighting. Almost none of them have anything a guest wants to photograph.</p>
       <p class="copy" style="margin-top:14px">Architecture sets the frame. Art is what people react to, post and talk about. That is the difference between a beautiful room and a room somebody tells their friends about.</p>
     </div>
-    <div class="imgph filled" style="aspect-ratio:3/4;min-height:0"><img src="images/image-2.jpg" alt="Guests reacting to a large scale installation" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-2.jpg</span></div>
+    <div class="imgph filled" style="aspect-ratio:3/4;min-height:0"><img src="images/image-2.jpg" alt="Guests reacting to a large scale installation" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-2.jpg</span></div>
   </div>
 </section>
 
@@ -579,8 +588,8 @@ p.copy{
       <p class="copy" style="margin-top:14px">Nothing is licensed, printed from a catalog or repeated. Every piece starts as an original.</p>
     </div>
     <div class="pair">
-      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-3.jpg" alt="JD Shultz in the studio" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-3.jpg</span></div>
-      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-4.jpg" alt="Original JD Shultz artwork" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-4.jpg</span></div>
+      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-3.jpg" alt="JD Shultz in the studio" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-3.jpg</span></div>
+      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-4.jpg" alt="Original JD Shultz artwork" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-4.jpg</span></div>
     </div>
   </div>
 </section>
@@ -593,13 +602,13 @@ p.copy{
       <div class="eyebrow">What We Do</div>
       <h2 class="heading">The Room<br>Becomes The Art</h2>
       <div class="rule"></div>
-      <p class="copy" style="margin-top:16px">We do not hang a few pieces and leave. We build the artwork into the space: walls, bars, bar tops, tables, elevators, corridors and any surface guests move past.</p>
+      <p class="copy" style="margin-top:16px">We do not hang a few pieces and leave. We build the artwork into the space: walls, bars, bar tops, tables, corridors and any surface guests move past.</p>
       <p class="copy" style="margin-top:14px">Designed for your brand, sized for your exact surfaces, and installed to look like it was always part of the building.</p>
       <div class="story-quote" style="margin-top:20px">
         <span class="q-line">Rather than decorating a room, we create destinations within it.</span>
       </div>
     </div>
-    <div class="imgph filled" style="aspect-ratio:4/3;min-height:0"><img src="images/image-5.jpg" alt="Art integrated into architectural surfaces" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-5.jpg</span></div>
+    <div class="imgph filled" style="aspect-ratio:4/3;min-height:0"><img src="images/image-5.jpg" alt="Art integrated into architectural surfaces" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-5.jpg</span></div>
   </div>
 </section>
 
@@ -615,8 +624,8 @@ p.copy{
       <p class="copy" style="margin-top:14px">Columns, soffits, stairwells and long blank runs. Installed edge to edge with no seams fighting the architecture.</p>
     </div>
     <div class="pair">
-      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-6.jpg" alt="Large scale architectural wall wrap" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-6.jpg</span></div>
-      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-7.jpg" alt="Feature wall installation" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-7.jpg</span></div>
+      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-6.jpg" alt="Large scale architectural wall wrap" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-6.jpg</span></div>
+      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-7.jpg" alt="Feature wall installation" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-7.jpg</span></div>
     </div>
   </div>
 </section>
@@ -631,17 +640,17 @@ p.copy{
       <div class="rule"></div>
       <p class="copy" style="margin-top:16px">The lobby is the handshake. The corridor is the part everyone else ignores. We cover both so the property feels like one idea instead of a lobby and then nothing.</p>
       <div class="benefit-list" style="margin-top:18px">
-        <div class="feat">Reception and arrival feature walls</div>
+        <div class="feat">Reception and arrival wall wraps</div>
         <div class="feat">Lounge, bar and amenity spaces</div>
-        <div class="feat">Elevator cabs and guest corridors</div>
+        <div class="feat">Guest corridors and landings</div>
         <div class="feat">Signature suites and club floors</div>
         <div class="feat">Gallery walls with original work, available to guests</div>
         <div class="feat">Pool decks and spa entries</div>
       </div>
     </div>
     <div class="pair">
-      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-8.jpg" alt="Hotel lobby feature wall" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-8.jpg</span></div>
-      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-9.jpg" alt="Wrapped elevator and corridor" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-9.jpg</span></div>
+      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-8.jpg" alt="Hotel lobby feature wall" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-8.jpg</span></div>
+      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-9.jpg" alt="Wrapped guest corridor" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-9.jpg</span></div>
     </div>
   </div>
 </section>
@@ -663,8 +672,8 @@ p.copy{
       </div>
     </div>
     <div class="pair">
-      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-10.jpg" alt="Restaurant dining room with custom art" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-10.jpg</span></div>
-      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-11.jpg" alt="Custom artistic tabletops" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-11.jpg</span></div>
+      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-10.jpg" alt="Restaurant dining room with custom art" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-10.jpg</span></div>
+      <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-11.jpg" alt="Custom artistic tabletops" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-11.jpg</span></div>
     </div>
   </div>
 </section>
@@ -690,9 +699,9 @@ p.copy{
     </div>
   </div>
   <div class="trio">
-    <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-12.jpg" alt="Custom wrapped illuminated bar front" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-12.jpg</span></div>
-    <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-13.jpg" alt="Custom artistic bar top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-13.jpg</span></div>
-    <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-14.jpg" alt="Rooftop bar and lounge environment" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-14.jpg</span></div>
+    <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-12.jpg" alt="Custom wrapped illuminated bar front" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-12.jpg</span></div>
+    <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-13.jpg" alt="Custom artistic bar top" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-13.jpg</span></div>
+    <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-14.jpg" alt="Rooftop bar and lounge environment" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-14.jpg</span></div>
   </div>
 </section>
 
@@ -714,7 +723,7 @@ p.copy{
         <div class="feat">A look competitors cannot copy</div>
       </div>
     </div>
-    <div class="imgph filled" style="aspect-ratio:4/3;min-height:0"><img src="images/image-15.jpg" alt="Guests photographing an installation" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-15.jpg</span></div>
+    <div class="imgph filled" style="aspect-ratio:4/3;min-height:0"><img src="images/image-15.jpg" alt="Guests photographing an installation" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-15.jpg</span></div>
   </div>
 </section>
 
@@ -732,7 +741,7 @@ p.copy{
         <span class="q-line">Every project becomes a signature element of the property.</span>
       </div>
     </div>
-    <div class="imgph filled" style="aspect-ratio:4/3;min-height:0"><img src="images/image-16.jpg" alt="Custom installation built for one property" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-16.jpg</span></div>
+    <div class="imgph filled" style="aspect-ratio:4/3;min-height:0"><img src="images/image-16.jpg" alt="Custom installation built for one property" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-16.jpg</span></div>
   </div>
 </section>
 
