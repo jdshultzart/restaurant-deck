@@ -534,6 +534,9 @@ p.copy{
 .pair{display:grid;grid-template-columns:1fr;gap:14px}
 /* three photos across the bottom */
 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px;align-items:start}
+.slide[data-title="Restaurants"] .pair .imgph.filled{max-width:430px!important}
+.imgph.filled.sub-img{max-width:360px!important}
+@media(max-width:860px){.slide[data-title="Restaurants"] .pair .imgph.filled,.imgph.filled.sub-img{max-width:100%!important}}
 /* two photos side by side */
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0 4px;align-items:start;max-width:780px}
 .duo > *{min-width:0}
@@ -679,11 +682,11 @@ p.copy{
 
 <!-- 7 RESTAURANTS -->
 <section class="slide" data-title="Restaurants">
-  <div class="chrome"><span>Restaurants</span><span class="num">07 / 12</span></div>
+  <div class="chrome"><span>Restaurants · Dining And Tabletops</span><span class="num">07 / 12</span></div>
   <div class="split img-left">
     <div>
       <div class="eyebrow">Restaurants</div>
-      <h2 class="heading">The Room You<br>Sell, And The<br>Table They Sit At</h2>
+      <h2 class="heading">The Room<br>You Sell</h2>
       <div class="rule"></div>
       <p class="copy" style="margin-top:16px">Private dining is a room you charge for, so the art in it affects the rate. Tabletops are a two hour impression, sealed and finished to take a full night of service.</p>
       <div class="benefit-list" style="margin-top:18px">
@@ -692,6 +695,7 @@ p.copy{
         <div class="feat">Custom tabletops and communal tables</div>
         <div class="feat">Entries, host stands and waiting areas</div>
       </div>
+      <div class="imgph filled sub-img" style="margin-top:18px"><img src="images/image-11-b.jpg" alt="Private dining room installation" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-11-b.jpg</span></div>
     </div>
     <div class="pair">
       <div class="imgph filled" style="aspect-ratio:3/2;min-height:0"><img src="images/image-10.jpg" alt="Restaurant dining room with custom art" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-10.jpg</span></div>
