@@ -517,6 +517,10 @@ p.copy{
 .pair{display:grid;grid-template-columns:1fr;gap:14px}
 /* three photos across the bottom */
 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px;align-items:start}
+/* two photos side by side */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0 4px;align-items:start;max-width:780px}
+.duo > *{min-width:0}
+@media(max-width:860px){.duo{grid-template-columns:1fr;gap:14px;max-width:100%}}
 @media(max-width:860px){.trio{grid-template-columns:1fr;gap:14px;margin-top:18px}}
 
 /* desktop only: flip a split so the photo sits on the left, text stays first in the DOM for mobile */
@@ -525,7 +529,7 @@ p.copy{
   .split.img-left > *:last-child{order:1}
 }
 .step strong{color:var(--white);font-weight:500}
-.steps{grid-template-columns:1fr 1fr}
+.steps{grid-template-columns:1fr!important;gap:12px}
 @media(max-width:860px){
   .slide .copy{max-width:100%!important}
   .feat-grid.three{grid-template-columns:1fr!important}
@@ -736,7 +740,7 @@ p.copy{
       <h2 class="heading">One Of One,<br>Built For<br>Your Property</h2>
       <div class="rule"></div>
       <p class="copy" style="margin-top:16px">Quiet and sophisticated, bold and contemporary, or music driven. The direction follows your brand, not my portfolio.</p>
-      <p class="copy" style="margin-top:14px">What we build for your property exists in that room and nowhere else. Groups with multiple locations get original work for each one.</p>
+      <p class="copy" style="margin-top:14px">What we build for your property exists in that space and nowhere else. Groups with multiple locations get original work for each one.</p>
       <div class="story-quote" style="margin-top:20px">
         <span class="q-line">Every project becomes a signature element of the property.</span>
       </div>
@@ -748,37 +752,50 @@ p.copy{
 <!-- 11 PROCESS -->
 <section class="slide" data-title="Process">
   <div class="chrome"><span>How A Project Runs</span><span class="num">11 / 12</span></div>
-  <div class="eyebrow">Process</div>
-  <h2 class="heading">How A Project Runs</h2>
-  <div class="rule"></div>
-  <p class="copy" style="margin-top:8px">We work directly with owners, operators, architects and designers, so the finished install feels built in, not applied.</p>
-  <div class="steps" style="margin-top:22px">
-    <div class="step"><span class="n">1</span><span><strong>Walkthrough.</strong> We walk the property, or review plans, and pick the surfaces with the most impact.</span></div>
-    <div class="step"><span class="n">2</span><span><strong>Direction.</strong> We agree on the artistic direction with ownership and the design team.</span></div>
-    <div class="step"><span class="n">3</span><span><strong>Design.</strong> Original artwork sized to your exact surfaces, with proofs for approval.</span></div>
-    <div class="step"><span class="n">4</span><span><strong>Production.</strong> Materials finished for real use, including daily service and cleaning.</span></div>
-    <div class="step"><span class="n">5</span><span><strong>Installation.</strong> Installed around your operating hours, with minimal disruption.</span></div>
-    <div class="step"><span class="n">6</span><span><strong>Refresh.</strong> Seasonal or annual updates for properties that want the space to keep evolving.</span></div>
+  <div class="split text-first">
+    <div>
+      <div class="eyebrow">Process</div>
+      <h2 class="heading">How A<br>Project Runs</h2>
+      <div class="rule"></div>
+      <p class="copy" style="margin-top:16px">We work directly with owners, operators, architects and designers, so the finished install feels built in, not applied.</p>
+      <div class="steps" style="margin-top:20px">
+        <div class="step"><span class="n">1</span><span><strong>Walkthrough.</strong> We walk the property, or review plans, and pick the surfaces with the most impact.</span></div>
+        <div class="step"><span class="n">2</span><span><strong>Direction.</strong> We agree on the artistic direction with ownership and the design team.</span></div>
+        <div class="step"><span class="n">3</span><span><strong>Design.</strong> Original artwork sized to your exact surfaces, with proofs for approval.</span></div>
+        <div class="step"><span class="n">4</span><span><strong>Production.</strong> Materials finished for real use, including daily service and cleaning.</span></div>
+        <div class="step"><span class="n">5</span><span><strong>Installation.</strong> Installed around your operating hours, with minimal disruption.</span></div>
+        <div class="step"><span class="n">6</span><span><strong>Refresh.</strong> Seasonal or annual updates for properties that want the space to keep evolving.</span></div>
+      </div>
+    </div>
+    <div class="imgph filled"><img src="images/image-17.jpg" alt="Installation in progress on site" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-17.jpg</span></div>
   </div>
 </section>
 
 <!-- 12 NEXT STEP -->
 <section class="slide" data-title="Next Step">
   <div class="chrome"><span>Let's Walk Your Space</span><span class="num">12 / 12</span></div>
-  <div class="eyebrow">Next Step</div>
-  <h2 class="heading">Let's Walk<br>Your Space</h2>
-  <div class="rule"></div>
-  <div class="ask-box">
-    <p class="copy lede">Bring me into the property or send the plans. I will come back with a direction and the surfaces worth building on.</p>
-    <p class="copy" style="margin-top:14px">No cost for the walkthrough or the first concept. If the direction is right, we move to design.</p>
-  </div>
-  <div class="contact-row">
-    <div><span class="k">Name</span>JD Shultz</div>
-    <div><span class="k">Gallery</span>7763 Melrose Ave, Los Angeles</div>
-    <div><span class="k">Phone</span><a href="tel:3238395560" style="color:var(--white);text-decoration:none">323-839-5560</a></div>
-    <div><span class="k">Email</span>info@jdshultzart.com</div>
-    <div><span class="k">Website</span>jdshultzart.com</div>
-    <div><span class="k">Instagram</span>@jd_shultz</div>
+  <div class="split text-first">
+    <div>
+      <div class="eyebrow">Next Step</div>
+      <h2 class="heading">Let's Walk<br>Your Space</h2>
+      <div class="rule"></div>
+      <div class="ask-box" style="margin-top:16px">
+        <p class="copy lede">Bring me into the property or send the plans. I will come back with a direction and the surfaces worth building on.</p>
+        <p class="copy" style="margin-top:14px">No cost for the walkthrough or the first concept. If the direction is right, we move to design.</p>
+      </div>
+      <div class="contact-row">
+        <div><span class="k">Name</span>JD Shultz</div>
+        <div><span class="k">Gallery</span>7763 Melrose Ave, Los Angeles</div>
+        <div><span class="k">Phone</span><a href="tel:3238395560" style="color:var(--white);text-decoration:none">323-839-5560</a></div>
+        <div><span class="k">Email</span>info@jdshultzart.com</div>
+        <div><span class="k">Website</span>jdshultzart.com</div>
+        <div><span class="k">Instagram</span>@jd_shultz</div>
+      </div>
+    </div>
+    <div class="pair">
+      <div class="imgph filled"><img src="images/image-18.jpg" alt="Completed installation" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-18.jpg</span></div>
+      <div class="imgph filled"><img src="images/image-19.jpg" alt="Completed installation" onerror="this.style.display='none';this.parentElement.classList.add('empty')" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;border-radius:2px"><span class="ph-fallback">image-19.jpg</span></div>
+    </div>
   </div>
 </section>
 
